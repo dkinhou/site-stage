@@ -1,0 +1,62 @@
+/* --- VARIABLES GLOBALES (Charte Graphique) --- */
+:root {
+    --primary: #2c3e50;    /* Bleu Roi (Sérieux) */
+    --secondary: #1abc9c;  /* Turquoise (Action) */
+    --bg-light: #f4f6f7;   /* Fond gris clair */
+    --white: #ffffff;
+    --text: #333333;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Open Sans', sans-serif; background: var(--bg-light); color: var(--text); line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* Header & Footer communs */
+header, footer { background: var(--primary); color: var(--white); padding: 1rem; }
+header { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-weight: bold; font-size: 1.2rem; color: var(--secondary); }
+nav a { margin-left: 15px; font-size: 0.9rem; }
+nav a:hover { color: var(--secondary); }
+footer { text-align: center; margin-top: 50px; font-size: 0.8rem; }
+
+
+/* --- SPECIFIQUE OFFRES --- */
+.container { padding: 20px; max-width: 1200px; margin: 0 auto; }
+h2 { text-align: center; margin-bottom: 30px; color: var(--primary); }
+
+.offres-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 colonne sur mobile */
+    gap: 20px;
+}
+
+.offre-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid var(--secondary);
+    box-shadow: var(--shadow);
+}
+
+.tag {
+    background: #e0f2f1;
+    color: var(--secondary);
+    padding: 3px 8px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.btn-details {
+    display: block;
+    margin-top: 15px;
+    text-align: right;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .offres-grid { grid-template-columns: repeat(3, 1fr); } /* 3 colonnes PC */
+}
